@@ -26,23 +26,20 @@
     counter-reset: item; /* Para números personalizados en ol */
 }
 
-.lists-container ul li {
+.lists-container ul li, .lists-container ol li {
     position: relative;
-    padding-left: 30px; /* Espacio para el marcador personalizado */
+    padding-left: 40px; /* Espacio suficiente para cualquier marcador */
 }
 
 .lists-container ul li::before {
     content: "•";
     position: absolute;
     left: 0;
-    width: 20px;
-    text-align: center;
-    font-weight: bold;
+    width: 30px;
+    text-align: left;
 }
 
 .lists-container ol li {
-    position: relative;
-    padding-left: 30px; /* Espacio para el marcador personalizado */
     counter-increment: item;
 }
 
@@ -50,9 +47,8 @@
     content: counter(item) ".";
     position: absolute;
     left: 0;
-    width: 20px;
-    text-align: center;
-    font-weight: bold;
+    width: 30px;
+    text-align: left;
 } 
  
 .texto { 
