@@ -11,16 +11,41 @@
     height: auto;
 }
  
-.recipe-list { 
+.recipe-list, .recipes-list { 
     display: flex; 
     justify-content: center; /* Centra las listas */
     margin-top: 20px; 
 }
 
 .recipe-list ul, .recipe-list ol { 
-    width: 400px; /* Ancho un poco mayor para mejor legibilidad */
     text-align: justify; /* Texto justificado */
     padding-left: 0; /* Sin padding */
+}
+
+/* Anchos personalizados para cada lista */
+.recipe-list ul { 
+    width: 208px; /* Ancho para ingredients */
+}
+
+.recipe-list ol { 
+    width: 300px; /* Ancho para steps */
+}
+
+/* Nueva clase para la lista del index */
+.recipes-list ul {
+    width: 125px; /* Ancho para recipes en index */
+    text-align: justify; /* Texto justificado */
+    padding-left: 0; /* Sin padding */
+}
+
+.recipes-list ul li {
+    margin-bottom: 4px; /* Pequeño margen entre elementos */
+    text-align: justify; /* Justificado como en Word */
+    hyphens: auto; /* Permite separación por sílabas */
+    word-spacing: 0.1em; /* Ajusta el espaciado entre palabras */
+    line-height: 1.5; /* Incrementa el interlineado */
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 .recipe-list ul li, .recipe-list ol li {
@@ -28,6 +53,7 @@
     text-align: justify; /* Justificado como en Word */
     hyphens: auto; /* Permite separación por sílabas */
     word-spacing: 0.1em; /* Ajusta el espaciado entre palabras */
+    line-height: 1.5; /* Incrementa el interlineado */
 }
 
 .recipe-list ul li {
