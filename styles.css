@@ -15,6 +15,18 @@
     display: flex; 
     gap: 40px; /* Espacio entre listas */ 
     margin-top: 20px; 
+}
+
+/* Para cuando hay una sola lista */
+.lists-container:has(> ul:only-child), 
+.lists-container:has(> ol:only-child) {
+    justify-content: flex-start; /* Alinea a la izquierda cuando hay una sola lista */
+}
+
+/* Para cuando hay múltiples listas */
+.lists-container:has(> ul:not(:only-child)), 
+.lists-container:has(> ol:not(:only-child)) {
+    justify-content: center; /* Centra cuando hay múltiples listas */
 } 
  
 .lists-container ul, .lists-container ol { 
