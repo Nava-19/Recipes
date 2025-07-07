@@ -3,8 +3,15 @@
     font-family: "Times New Roman", serif;
     font-size: 16px;
 }
+
 .title {
     text-align: center;
     color: blue;
     font-weight: bold;
+}
+
+.image {
+    text-align: center;
+    height: auto;
+    width: 500;
 }
