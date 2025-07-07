@@ -11,56 +11,49 @@
     height: auto;
 }
  
-.lists-container { 
+.recipe-list { 
     display: flex; 
-    gap: 40px; /* Espacio entre listas */ 
+    justify-content: center; /* Centra las listas */
     margin-top: 20px; 
 }
 
-/* Para cuando hay una sola lista */
-.lists-container:has(> ul:only-child), 
-.lists-container:has(> ol:only-child) {
-    justify-content: flex-start; /* Alinea a la izquierda cuando hay una sola lista */
-}
-
-/* Para cuando hay múltiples listas */
-.lists-container:has(> ul:not(:only-child)), 
-.lists-container:has(> ol:not(:only-child)) {
-    justify-content: center; /* Centra cuando hay múltiples listas */
-} 
- 
-.lists-container ul, .lists-container ol { 
-    width: 300px; /* ancho fijo para igualar altura */ 
-    text-align: left; /* para que el texto dentro de las listas quede alineado a la izquierda */ 
+.recipe-list ul, .recipe-list ol { 
+    width: 400px; /* Ancho un poco mayor para mejor legibilidad */
+    text-align: justify; /* Texto justificado */
     list-style: none; /* Removemos los marcadores por defecto */
     padding-left: 0; /* Sin padding */
     counter-reset: item; /* Para números personalizados en ol */
 }
 
-.lists-container ul li, .lists-container ol li {
+.recipe-list ul li, .recipe-list ol li {
     position: relative;
-    padding-left: 25px; /* Espacio más pequeño para que se vea compacto */
-    margin-bottom: 0; /* Sin margen entre elementos */
+    padding-left: 20px; /* Espacio para el marcador */
+    margin-bottom: 8px; /* Pequeño margen entre elementos */
+    text-align: justify; /* Justificado como en Word */
+    hyphens: auto; /* Permite separación por sílabas */
+    word-spacing: 0.1em; /* Ajusta el espaciado entre palabras */
 }
 
-.lists-container ul li::before {
+.recipe-list ul li::before {
     content: "•";
     position: absolute;
     left: 0;
-    width: 20px;
+    width: 15px;
     text-align: left;
+    font-weight: bold;
 }
 
-.lists-container ol li {
+.recipe-list ol li {
     counter-increment: item;
 }
 
-.lists-container ol li::before {
+.recipe-list ol li::before {
     content: counter(item) ".";
     position: absolute;
     left: 0;
-    width: 20px;
+    width: 15px;
     text-align: left;
+    font-weight: bold;
 } 
  
 .texto { 
