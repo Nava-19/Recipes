@@ -1,17 +1,25 @@
-.texto {
-    text-align: center;
-    font-family: "Times New Roman", serif;
-    font-size: 16px;
-}
-
 .title {
     text-align: center;
     color: blue;
     font-weight: bold;
 }
 
-.image {
-    text-align: center;
-    height: auto;
-    width: 500;
+.lists-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente las listas */
+    gap: 40px; /* Espacio entre listas */
+    margin-top: 20px;
 }
+
+.lists-container ul, .lists-container ol {
+    width: 300px; /* ancho fijo para igualar altura */
+    text-align: left; /* para que el texto dentro de las listas quede alineado a la izquierda */
+    list-style-position: inside; /* para que los bullets/números estén dentro del ancho */
+}
+
+.texto {
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
