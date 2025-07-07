@@ -1,25 +1,32 @@
-.title {
-    text-align: center;
-    color: blue;
-    font-weight: bold;
-}
+.title { 
+    text-align: center; 
+    color: blue; 
+    font-weight: bold; 
+} 
 
-.lists-container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente las listas */
-    gap: 40px; /* Espacio entre listas */
-    margin-top: 20px;
+.image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
-
-.lists-container ul, .lists-container ol {
-    width: 300px; /* ancho fijo para igualar altura */
-    text-align: left; /* para que el texto dentro de las listas quede alineado a la izquierda */
-    list-style-position: inside; /* para que los bullets/números estén dentro del ancho */
-}
+ 
+.lists-container { 
+    display: flex; 
+    justify-content: center; /* Centra horizontalmente las listas */ 
+    gap: 40px; /* Espacio entre listas */ 
+    margin-top: 20px; 
+} 
+ 
+.lists-container ul, .lists-container ol { 
+    width: 300px; /* ancho fijo para igualar altura */ 
+    text-align: left; /* para que el texto dentro de las listas quede alineado a la izquierda */ 
+    list-style-position: outside; /* Cambiado a outside para mejor alineación */
+    padding-left: 20px; /* Espacio para los marcadores */
+} 
 
 .texto {
     text-align: center;
     font-family: "Times New Roman", serif;
     font-size: 16px;
 }
-
