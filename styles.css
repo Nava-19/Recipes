@@ -7,7 +7,7 @@
 .image {
     display: block;
     margin: 0 auto;
-    width: 500;
+    max-width: 100%;
     height: auto;
 }
  
@@ -21,12 +21,42 @@
 .lists-container ul, .lists-container ol { 
     width: 300px; /* ancho fijo para igualar altura */ 
     text-align: left; /* para que el texto dentro de las listas quede alineado a la izquierda */ 
-    list-style-position: outside; /* Cambiado a outside para mejor alineación */
-    padding-left: 20px; /* Espacio para los marcadores */
-} 
+    list-style: none; /* Removemos los marcadores por defecto */
+    padding-left: 0; /* Sin padding */
+    counter-reset: item; /* Para números personalizados en ol */
+}
 
-.texto {
+.lists-container ul li {
+    position: relative;
+    padding-left: 30px; /* Espacio para el marcador personalizado */
+}
+
+.lists-container ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    width: 20px;
     text-align: center;
-    font-family: "Times New Roman", serif;
-    font-size: 16px;
+    font-weight: bold;
+}
+
+.lists-container ol li {
+    position: relative;
+    padding-left: 30px; /* Espacio para el marcador personalizado */
+    counter-increment: item;
+}
+
+.lists-container ol li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+} 
+ 
+.texto { 
+    text-align: center; 
+    font-family: "Times New Roman", serif; 
+    font-size: 16px; 
 }
