@@ -13,7 +13,6 @@
  
 .lists-container { 
     display: flex; 
-    justify-content: center; /* Centra horizontalmente las listas */ 
     gap: 40px; /* Espacio entre listas */ 
     margin-top: 20px; 
 } 
