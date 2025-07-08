@@ -37,7 +37,14 @@
 .recipes-list ul {
     width: 125px; /* Ancho para recipes en index */
     text-align: justify; /* Texto justificado */
-    padding-left: 0; /* Sin padding */
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+}
+
+.recipe {
+    border: 1px solid #fff;  /* For debugging */
+    width: 150px;
 }
 
 .recipes-list ul li {
