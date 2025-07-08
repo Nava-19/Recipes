@@ -35,11 +35,12 @@
 
 /* Nueva clase para la lista del index */
 .recipes-list ul {
-    width: 125px; /* Ancho para recipes en index */
+    width: 200; /* Ancho para recipes en index */
     text-align: justify; /* Texto justificado */
     color: #fff;
-    background-color: #5995DA;  /* Blue */
+    background-color: #f05cbe;  /* Blue */
     padding: 20px 0;
+    justify-content: center;
 }
 
 .recipe {
